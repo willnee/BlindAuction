@@ -25,7 +25,7 @@ contract simpleAuction
         {
             revert("Phien dau gia da ket thua!");
         }
-        if(&& msg.value <= highestBid)
+        if(msg.value <= highestBid)
         {
             revert("Ban phai nhap gia cao hon gia cao nhat hien tai!");
         }
@@ -65,6 +65,6 @@ contract simpleAuction
         }
         ended = true;
         emit auctionEnded(highestBidder,highestBid);
-        beneficiary.tranfer(highestBid);
+        beneficiary.transfer(highestBid);
     }
 }
