@@ -1,1 +1,1 @@
-# BlindAuction
+# OpenAuction
